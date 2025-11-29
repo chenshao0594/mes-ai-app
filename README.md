@@ -1,78 +1,269 @@
-<p align="center">
-  <a href="https://github.com/codercup2/unibest">
-    <img width="160" src="./src/static/logo.svg">
-  </a>
-</p>
+# MES-AI-APP 移动办公应用
 
-<h1 align="center">
-  <a href="https://github.com/codercup2/unibest" target="_blank">unibest - 最好的 uniapp 开发框架</a>
-</h1>
+<p align="center">
+  <img width="160" src="./src/static/logo.svg" alt="MES-AI-APP Logo">
+</p>
 
 <div align="center">
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/codercup/unibest?style=flat&logo=github)](https://github.com/codercup/unibest)
-[![GitHub forks](https://img.shields.io/github/forks/codercup/unibest?style=flat&logo=github)](https://github.com/codercup/unibest)
-[![star](https://gitee.com/codercup/unibest/badge/star.svg?theme=dark)](https://gitee.com/codercup/unibest/stargazers)
-[![fork](https://gitee.com/codercup/unibest/badge/fork.svg?theme=dark)](https://gitee.com/codercup/unibest/members)
-![node version](https://img.shields.io/badge/node-%3E%3D18-green)
-![pnpm version](https://img.shields.io/badge/pnpm-%3E%3D7.30-green)
-![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/codercup/unibest)
-![GitHub License](https://img.shields.io/github/license/codercup/unibest)
+![Node Version](https://img.shields.io/badge/node-%3E%3D18-green)
+![pnpm Version](https://img.shields.io/badge/pnpm-%3E%3D7.30-green)
+![Vue Version](https://img.shields.io/badge/vue-3.4-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
-`unibest` —— 最好的 `uniapp` 开发模板，由 `uniapp` + `Vue3` + `Ts` + `Vite5` + `UnoCss` + `wot-ui` + `z-paging` 构成，使用了最新的前端技术栈，无需依靠 `HBuilderX`，通过命令行方式运行 `web`、`小程序` 和 `App`（编辑器推荐 `VSCode`，可选 `webstorm`）。
-
-`unibest` 内置了 `约定式路由`、`layout布局`、`请求封装`、`请求拦截`、`登录拦截`、`UnoCSS`、`i18n多语言` 等基础功能，提供了 `代码提示`、`自动格式化`、`统一配置`、`代码片段` 等辅助功能，让你编写 `uniapp` 拥有 `best` 体验 （ `unibest 的由来`）。
-
-![](https://raw.githubusercontent.com/andreasbm/readme/master/screenshots/lines/rainbow.png)
-
-<p align="center">
-  <a href="https://codercup2.github.io/unibest-docs/" target="_blank">📖 文档地址</a>
-  <span style="margin:0 10px;">|</span>
-  <a href="https://codercup2.github.io/hello-unibest/" target="_blank">📱 DEMO 地址</a>
-</p>
+基于 **unibest** 框架开发的企业级移动办公应用，支持 **H5**、**微信小程序**、**APP** 多端运行。采用 `uniapp` + `Vue3` + `TypeScript` + `Vite5` + `UnoCSS` + `wot-design-uni` 等现代前端技术栈。
 
 ---
 
-注意旧的地址 [codercup](https://github.com/codercup/unibest) 我进不去了，使用新的 [codercup2](https://github.com/codercup2/unibest)。PR和 issue 也请使用新地址，否则无法合并。
+## ✨ 功能特性
 
-## ⚙️ 环境
+### 🔐 用户认证
 
-- node>=18
-- pnpm>=7.30
-- Vue Official<=2.1.6
-- TypeScript<=5.5.4
+- 用户名/密码登录
+- 手机号验证码登录
+- 第三方社交登录（微信等）
+- 多租户支持
 
-## &#x1F4C2; 快速开始
+### 📋 工作流审批 (BPM)
 
-执行 `pnpm create unibest` 创建项目
+- 待办任务列表
+- 已办任务查询
+- 抄送给我的流程
+- 我发起的流程
+- 流程审批/驳回操作
 
-执行 `pnpm i` 安装依赖
+### 🖥️ 工作台
 
-执行 `pnpm dev` 运行 `H5`
+- 用户管理
+- 角色管理
+- 菜单管理
 
-## 📦 运行（支持热更新）
+### 📱 其他功能
 
-- web平台： `pnpm dev:h5`, 然后打开 [http://localhost:9000/](http://localhost:9000/)。
-- weixin平台：`pnpm dev:mp-weixin` 然后打开微信开发者工具，导入本地文件夹，选择本项目的`dist/dev/mp-weixin` 文件。
-- APP平台：`pnpm dev:app`, 然后打开 `HBuilderX`，导入刚刚生成的`dist/dev/app` 文件夹，选择运行到模拟器(开发时优先使用)，或者运行的安卓/ios基座。
+- 消息中心
+- 通讯录
+- 个人中心
+- 系统设置
 
-## 🔗 发布
+---
 
-- web平台： `pnpm build:h5`，打包后的文件在 `dist/build/h5`，可以放到web服务器，如nginx运行。如果最终不是放在根目录，可以在 `manifest.config.ts` 文件的 `h5.router.base` 属性进行修改。
-- weixin平台：`pnpm build:mp-weixin`, 打包后的文件在 `dist/build/mp-weixin`，然后通过微信开发者工具导入，并点击右上角的“上传”按钮进行上传。
-- APP平台：`pnpm build:app`, 然后打开 `HBuilderX`，导入刚刚生成的`dist/build/app` 文件夹，选择发行 - APP云打包。
+## 🛠️ 技术栈
+
+| 技术              | 版本   | 说明                   |
+| ----------------- | ------ | ---------------------- |
+| Vue               | 3.4.21 | 渐进式 JavaScript 框架 |
+| Vite              | 5.2.8  | 下一代前端构建工具     |
+| TypeScript        | 5.9.3  | JavaScript 超集        |
+| UnoCSS            | 0.58.9 | 原子化 CSS 引擎        |
+| wot-design-uni    | 1.13.0 | UI 组件库              |
+| z-paging          | 2.8.8  | 分页下拉刷新组件       |
+| Pinia             | 2.0.36 | Vue 状态管理           |
+| @dcloudio/uni-app | 4.87   | uniapp 核心 (Compiler) |
+
+---
+
+## 📁 项目结构
+
+```
+src/
+├── components/        # 公共组件
+│   └── fg-tabbar/     # 自定义底部导航栏
+├── hooks/             # 组合式函数
+│   ├── useRequest.ts  # 请求封装
+│   └── useUpload.ts   # 文件上传
+├── interceptors/      # 拦截器
+│   ├── request.ts     # 请求拦截器（Token、租户）
+│   └── route.ts       # 路由拦截器（登录保护）
+├── layouts/           # 布局组件
+│   ├── default.vue    # 默认布局
+│   └── tabbar.vue     # TabBar 布局
+├── pages/             # 页面目录
+│   ├── login/         # 登录相关页面
+│   ├── work/          # 工作台
+│   ├── task/          # 审批任务
+│   ├── message/       # 消息中心
+│   ├── contacts/      # 通讯录
+│   ├── colab/         # 协作
+│   └── my/            # 个人中心
+├── pages-sub/         # 分包页面
+├── service/           # API 接口定义
+├── store/             # Pinia 状态管理
+│   ├── user.ts        # 用户状态
+│   └── dict.ts        # 字典数据
+├── static/            # 静态资源
+├── style/             # 全局样式
+├── types/             # TypeScript 类型定义
+└── utils/             # 工具函数
+    ├── auth.ts        # 认证相关
+    ├── dict.ts        # 字典工具
+    ├── http.ts        # HTTP 封装
+    └── platform/      # 多平台适配
+```
+
+---
+
+## ⚙️ 环境要求
+
+- **Node.js** >= 18
+- **pnpm** >= 7.30
+- **VSCode**（推荐）或 WebStorm
+- 微信开发者工具（小程序开发）
+- HBuilderX（APP 开发）
+
+---
+
+## 🚀 快速开始
+
+### 1. 安装依赖
+
+```bash
+pnpm install
+```
+
+### 2. 开发运行
+
+```bash
+# H5 端
+pnpm dev:h5
+
+# 微信小程序
+pnpm dev:mp-weixin
+
+# APP 端
+pnpm dev:app
+```
+
+### 3. 构建发布
+
+```bash
+# H5 端
+pnpm build:h5
+
+# 微信小程序
+pnpm build:mp-weixin
+
+# APP 端
+pnpm build:app
+```
+
+---
+
+## 📦 多平台支持
+
+| 平台         | 开发命令             | 构建命令               | 说明                      |
+| ------------ | -------------------- | ---------------------- | ------------------------- |
+| H5           | `pnpm dev:h5`        | `pnpm build:h5`        | 浏览器运行，端口 9000     |
+| 微信小程序   | `pnpm dev:mp-weixin` | `pnpm build:mp-weixin` | 需配合微信开发者工具      |
+| APP          | `pnpm dev:app`       | `pnpm build:app`       | 需配合 HBuilderX          |
+| 支付宝小程序 | `pnpm dev:mp-alipay` | `pnpm build:mp-alipay` | 需配合支付宝开发者工具    |
+| 其他小程序   | `pnpm dev:mp-*`      | `pnpm build:mp-*`      | 参见 package.json scripts |
+
+---
+
+## 🔧 项目配置
+
+### 环境变量
+
+在 `env/` 目录下创建环境配置文件：
+
+- `.env.development` - 开发环境
+- `.env.production` - 生产环境
+
+```env
+# 应用标题
+VITE_APP_TITLE=MES-AI-APP
+
+# API 基础地址
+VITE_SERVER_BASEURL=https://api.example.com
+
+# 是否启用代理（H5 开发时）
+VITE_APP_PROXY=true
+
+# 微信小程序 AppID
+VITE_WX_APPID=your_wx_appid
+
+# 多租户开关
+VITE_APP_TENANT_ENABLE=true
+```
+
+### 页面路由配置
+
+本项目使用 **约定式路由**，在 Vue 文件中通过 `<route>` 块配置：
+
+```vue
+<route lang="json5">
+{
+  layout: 'tabbar', // 布局类型
+  style: {
+    navigationBarTitleText: '工作台'
+  },
+  needLogin: true // 是否需要登录
+}
+</route>
+```
+
+---
+
+## 🔐 权限流程
+
+1. 用户登录获取 `accessToken` 和 `refreshToken`
+2. `accessToken` 存储在本地，请求时自动携带
+3. 路由拦截器判断页面是否需要登录
+4. 需要登录的页面会自动拉取用户信息和权限
+5. 请求拦截器自动添加 Token 和租户信息
+
+---
+
+## 📐 开发规范
+
+### 代码风格
+
+- 使用 **ESLint** + **Prettier** 进行代码格式化
+- 使用 **Stylelint** 规范 CSS/SCSS 样式
+- 使用 **commitlint** 规范 Git 提交信息
+
+### 提交规范
+
+```bash
+# 使用交互式提交
+pnpm cz
+
+# 提交格式
+feat: 新功能
+fix: 修复问题
+docs: 文档更新
+style: 代码格式
+refactor: 重构
+perf: 性能优化
+test: 测试
+chore: 构建/工具
+```
+
+---
+
+## 📚 相关文档
+
+- [unibest 文档](https://codercup2.github.io/unibest-docs/)
+- [wot-design-uni 组件库](https://wot-design-uni.cn/)
+- [z-paging 文档](https://z-paging.zxlee.cn/)
+- [UnoCSS 文档](https://unocss.dev/)
+- [Vue 3 文档](https://cn.vuejs.org/)
+- [uni-app 文档](https://uniapp.dcloud.net.cn/)
+
+---
+
+## 🤝 贡献指南
+
+1. Fork 本仓库
+2. 创建特性分支 (`git checkout -b feature/amazing-feature`)
+3. 提交更改 (`git commit -m 'feat: add amazing feature'`)
+4. 推送分支 (`git push origin feature/amazing-feature`)
+5. 提交 Pull Request
+
+---
 
 ## 📄 License
 
 [MIT](https://opensource.org/license/mit/)
-
-Copyright (c) 2024 菲鸽
-
-## 捐赠
-
-<p align='center'>
-<img alt="special sponsor appwrite" src="./screenshots/pay-1.png" height="330" style="display:inline-block; height:330px;">
-<img alt="special sponsor appwrite" src="./screenshots/pay-2.png" height="330" style="display:inline-block; height:330px; margin-left:10px;">
-</p>
