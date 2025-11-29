@@ -1,0 +1,235 @@
+{
+  "globalStyle": {
+    "navigationStyle": "default",
+    "navigationBarTitleText": "unibest",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFFFFF"
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^wd-(.*)": "wot-design-uni/components/wd-$1/wd-$1.vue",
+      "^(?!z-paging-refresh|z-paging-load-more)z-paging(.*)": "z-paging/components/z-paging$1/z-paging$1.vue"
+    }
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#999999",
+    "selectedColor": "#018d71",
+    "backgroundColor": "#F8F8F8",
+    "borderStyle": "black",
+    "height": "50px",
+    "fontSize": "10px",
+    "iconWidth": "24px",
+    "spacing": "3px",
+    "list": [
+      {
+        "pagePath": "pages/message/index",
+        "text": "消息",
+        "icon": "i-ic-outline-message",
+        "iconType": "unocss"
+      },
+      {
+        "pagePath": "pages/colab/index",
+        "text": "协作",
+        "icon": "i-ic-outline-handshake",
+        "iconType": "unocss"
+      },
+      {
+        "pagePath": "pages/work/index",
+        "text": "工作台",
+        "icon": "i-ic-baseline-apps",
+        "iconType": "unocss"
+      },
+      {
+        "pagePath": "pages/contacts/index",
+        "text": "通讯录",
+        "icon": "i-ic-baseline-contact-page",
+        "iconType": "unocss"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "icon": "i-ic-baseline-person",
+        "iconType": "unocss"
+      }
+    ]
+  },
+  "pages": [
+    {
+      "path": "pages/work/index",
+      "type": "home",
+      "layout": "tabbar",
+      "style": {
+        "navigationBarTitleText": "工作台"
+      }
+    },
+    {
+      "path": "pages/task/index",
+      "type": "home",
+      "layout": "tabbar",
+      "style": {
+        "navigationBarTitleText": "审批"
+      }
+    },
+    {
+      "path": "pages/colab/index",
+      "type": "page",
+      "layout": "tabbar",
+      "style": {
+        "navigationBarTitleText": "协作"
+      }
+    },
+    {
+      "path": "pages/contacts/index",
+      "type": "page",
+      "layout": "tabbar",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "通讯录"
+      }
+    },
+    {
+      "path": "pages/login/forget",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "忘记密码"
+      },
+      "needLogin": false
+    },
+    {
+      "path": "pages/login/index",
+      "type": "page",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "登录页面"
+      },
+      "needLogin": false
+    },
+    {
+      "path": "pages/login/phoneIndex",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": ""
+      },
+      "needLogin": false
+    },
+    {
+      "path": "pages/login/registerCode",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "获取验证码"
+      },
+      "needLogin": false
+    },
+    {
+      "path": "pages/message/index",
+      "type": "page",
+      "layout": "tabbar",
+      "style": {
+        "navigationBarTitleText": "消息"
+      }
+    },
+    {
+      "path": "pages/my/index",
+      "type": "page",
+      "layout": "tabbar",
+      "style": {
+        "navigationBarTitleText": "我的信息"
+      }
+    },
+    {
+      "path": "pages/my-info/index",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "用户信息"
+      }
+    },
+    {
+      "path": "pages/person-center/index",
+      "type": "page",
+      "layout": "tabbar",
+      "style": {
+        "navigationBarTitleText": "我的信息"
+      }
+    },
+    {
+      "path": "pages/role/edit",
+      "type": "page"
+    },
+    {
+      "path": "pages/role/index",
+      "type": "page"
+    },
+    {
+      "path": "pages/role/show",
+      "type": "page"
+    },
+    {
+      "path": "pages/user/edit",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "新增用户"
+      }
+    },
+    {
+      "path": "pages/user/index",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "用户管理"
+      }
+    },
+    {
+      "path": "pages/user/show",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "用户详情"
+      }
+    },
+    {
+      "path": "pages/colab/detail/index",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "审批详情"
+      }
+    },
+    {
+      "path": "pages/my/contact-service/index",
+      "type": "page",
+      "layout": "tabbar",
+      "style": {
+        "navigationBarTitleText": "联系客服"
+      }
+    },
+    {
+      "path": "pages/my/helper/index",
+      "type": "page",
+      "layout": "tabbar",
+      "style": {
+        "navigationBarTitleText": "帮助中心"
+      }
+    },
+    {
+      "path": "pages/my/mail/index",
+      "type": "page",
+      "layout": "tabbar",
+      "style": {
+        "navigationBarTitleText": "站内信"
+      }
+    },
+    {
+      "path": "pages/my/system-setting/index",
+      "type": "page",
+      "layout": "tabbar",
+      "style": {
+        "navigationBarTitleText": "系统设置"
+      }
+    }
+  ],
+  "subPackages": []
+}

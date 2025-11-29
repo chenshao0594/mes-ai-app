@@ -1,0 +1,18 @@
+{
+  "id": "ua-timeline",
+  "name": "uniapp timeline时间轴组件",
+  "displayName": "uniapp timeline时间轴组件",
+  "version": "1.1.7",
+  "description": "基于uniapp vue3自定义timeline时间线展示组件，适用于h5+小程序+App端。",
+  "keywords": [
+    "ua-timeline",
+    "uniapp时间轴",
+    "uni-timeline"
+  ],
+  "dcloudext": {
+    "category": [
+      "前端组件",
+      "通用组件"
+    ]
+  }
+}
